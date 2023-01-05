@@ -4,7 +4,9 @@ Repository for Year In Books website
 ## Technical stuff
 This is my _first_ github repository.
 
-What you see here is all the vanilla html and css used to build [Year In Books](https://yearinbooks.com). I am using visual code as my editor, Github desktop to commit changes and Netlify to deploy my website. My data comes from _Goodreads_ (it is static, so I just pasted it from there lol). In the future, I will figure out a way to make it dynamic. I built this website to primarily practice typography on the web. It is responsive and the type should scale seamlessly on any device.
+**I built this website to primarily practice typography on the web. It is responsive and the type should scale seamlessly on any device.**
+
+What you see here is all the vanilla html and css used to build [Year In Books](https://yearinbooks.com). I am using visual code as my editor, Github desktop to commit changes and Netlify to deploy my website. My data comes from _Goodreads_ (it is static, so I just pasted it from there lol). In the future, I will figure out a way to make it dynamic. 
 
 Use this repository to build your own year in books / movies / whatever and let me know if you have comments or questions! 
 
