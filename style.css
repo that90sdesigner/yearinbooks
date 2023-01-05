@@ -1,0 +1,239 @@
+/* specify the font, background and color */
+html{
+  
+/*   margin: auto;
+  width: 40%; */
+  font-size: 1em; /*16px*/
+  font-family: 'Newsreader', serif;
+  /*declare all colors */
+    --bg: hsla(60, 6%, 7%, 1);
+    --container: hsla(0, 0%, 10%, 1);
+    --surface: hsla(39, 54%, 91%, 1);
+    --border-light: hsla(42, 9%, 72%, 0.2);
+    --primary: hsla(39, 54%, 91%, 0.8); /* primary text */
+    --secondary: hsla(39, 54%, 91%, 0.6);
+    --callout: hsla(39, 54%, 91%, 1); 
+    --primary-inverse: hsla(0, 0%, 45%, 1); /*card text*/
+    --elevation: rgba(0, 0, 0, 0.66) 0px 22px 70px 4px; /*book shadow*/
+
+
+ /*set the site background and color*/
+  background: var(--bg);
+  color: var(--primary);
+  }
+
+/* add a custom text selection color*/
+::selection{
+  background: #ffe207; /* punchy yellow highlight*/
+  color: black;
+}
+
+
+  .main-content
+  {
+   margin: auto;
+   width: 90%;
+   max-width: 50rem;
+  }
+
+  body{
+    margin: 0;
+    padding-block-start: 5rem;
+    background: rgb(244,235,218);
+    background: linear-gradient(180deg, rgba(244,235,218,.2) 0%, rgba(244,235,218,0.1) 10%,  rgba(244,235,218,0) 30%); 
+    /* background-image: url('./hero-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 100%; */
+  }
+
+
+  a{
+    color: var(--callout);
+  }
+
+/* all the statistics */
+
+.stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: .5rem;
+  animation: fadeIn 2s;
+}
+
+/* Each block in the statistics section */
+.stats article {
+  background: var(--container);
+  padding: 2rem;
+  border-radius: .2rem;
+  text-align: center;
+/*   height: 4rem; */
+  font-size: 1.5vw;
+}
+
+
+/* Styling the label in each stat */
+.stats div{
+  font-family: 'Alegreya SC';
+  font-size: 1rem;
+  line-height: 1.2;
+  display: grid;
+  align-items: start;
+  padding-block-start: .5rem;
+}
+
+/* Styling the number in each stat */
+.stats number{
+  font-weight: 620;
+  font-size: clamp(1rem,1.5vw,2rem);
+}
+
+
+.about {
+  margin-block-start: 6rem; /* maintain distance from the stat */
+  margin-inline: auto; /* set the about text to center */
+  padding-inline: 2vw; /* less width than the stats */
+  color: var(--secondary);
+  font-size: clamp(1rem,1.8vw,1.2rem);
+  line-height: 1.5;
+  max-width: 450px;
+}
+
+.small-title {
+  text-transform: uppercase;
+  color: var(--callout);
+}
+
+.page-cal{
+  padding-inline: 8rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: .5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.material-symbols-outlined{
+  color: rgba(191, 187, 178, .5);
+}
+
+.page-title, .page-year {
+  text-align: center;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+.emphasis{
+  font-style: italic;
+}
+
+
+.page-title {
+  margin-block-start: 0;
+  margin-block-end: 4rem;
+  font-family: 'Newsreader';
+  font-weight: 600;
+  font-variation-settings: 'opsz' 40;
+  font-size: clamp(2rem,6vw,4rem);
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.page-year{
+  font-family: 'Alegreya SC', sans-serif;
+  letter-spacing: .2rem;
+  font-size: clamp(1.5rem,2.5vw,3rem);
+}
+
+.small-title{
+  font-family: 'Alegreya SC'
+}
+
+.index-card{
+  /* set the dimensions of the card */
+  width: 85%;
+  max-width: 37.5rem;
+  background: var(--surface);
+  color: var(--primary-inverse);
+  padding: 1rem;
+  margin-block-start: 1.5rem;
+  margin-inline: auto;
+  border-radius: .2rem;
+}
+
+.card-content{
+  display: grid;
+  grid-template-rows: 1fr;
+  border: 2px rgba(191, 187, 178, .5) solid;
+  padding: 1rem;
+  font-variation-settings: 'opsz' 14;
+}
+
+.review {
+  margin-block-start: 2rem;
+  font-size: clamp(1rem,1.8vw,1.2rem);
+  line-height: 1.5;
+}
+
+.book-block{
+  display: grid;
+  margin-block-end: 10rem;
+  margin-inline: auto;
+  padding-block: 3vw;
+  background: var(--container);
+  border: 1px solid var(--border-light);
+  border-radius: .2rem;
+}
+
+.book-author{
+  color: var(--primary-inverse);
+  margin-inline-end: .5rem;
+  font-size: clamp(1rem,1.8vw,1.2rem);
+  line-height: 1.5;
+}
+
+.book-title{
+  font-size: clamp(1rem,1.8vw,1.2rem);
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.book-list{
+  margin-block-start: 8rem;
+}
+
+.book-img{
+    width: min(50vw,18rem);
+    margin-inline: auto;
+    box-shadow: var(--elevation);
+    z-index: 1;
+    border-radius: .2rem;
+}
+
+footer {
+  padding: 2rem;
+  border-top: solid .1rem var(--border-light);
+  font-size: clamp(1rem,1.8vw,1.2rem);
+}
+
+.footer-content{
+  color: var(--secondary);
+  width: 90%;
+  max-width: 40rem;
+  line-height: 1.5rem;
+  margin: auto;
+}
+/* 
+@media (prefers-color-scheme: light) {
+    html{
+        background: red;
+    }
+}
+
+html:has(.light:checked)
+{
+    background: red;
+} */
